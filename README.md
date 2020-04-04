@@ -37,4 +37,4 @@ adding class name to the created element <br>
 Finally we are appending the created element into root element <br>
 ```rootElement.appendChild(element)```
 
-So Here we learned r brush up how to create basic user interface using vanilla javascript :)
+So Here we learned or brushed up how to create basic user interface using vanilla javascript :)
