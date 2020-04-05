@@ -105,6 +105,20 @@ Atlast we are rendering the element to the root element using ```ReactDOM.render
 ## 03-jsx
 In this blog we are going to see how to use jsx in our react application. <br>
 
+```
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+  <script type="text/babel">
+    const rootElement = document.getElementById('root')
+    const element = <div className="container">Hello World</div>
+    ReactDOM.render(element, rootElement)
+  </script>
+</body>
+```
+
 Using create react element in this wat works out just fine. But it is not entirely ergonomic. It is not that most of community creates React elements.
 
 ```
