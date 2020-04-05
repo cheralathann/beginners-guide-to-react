@@ -101,3 +101,25 @@ const element = React.createElement('div', {
 
 Atlast we are rendering the element to the root element using ```ReactDOM.render()```
 ```ReactDOM.render(element, rootElement)```
+
+## 03-jsx
+In this blog we are going to see how to use jsx in our react application. <br>
+
+Using create react element in this wat works out just fine. But it is not entirely ergonomic. It is not that most of community creates React elements.
+
+```
+const element = React.createElement('div', {
+  children: 'Hello World!',
+  className: 'container',
+})
+```
+
+Most of the community is using JSX. Which is HTML like syntax in our Javascript. So if I were to create the same React element using JSX. I would make like below. We'll say element is a div. Our children are Hello World!. Then we add className which is prop. That'll go as an attrubute on our div here with className="container" <br>
+
+```const element = <div className="container">Hello World</div>``` <br>
+
+Most importantly browser doesn't understand this natively. We need to compile this to something that the browser can understand. That where Babel comes in. Babel is a javascript compiler supporting the next generation of javascript as well as non standard feature like JSX. Here you can use Babel [try it out](https://babeljs.io/repl) page to see our code being compiled to something very familiar to us and the browser. I would like you to spend sometime in this tool. Understanding how JSX is compiled will make you effective at using JSX.
+
+In a typical application you are going to be using a tool that will use to Babel to compile JSX to Javascript for you. For our purposes we are going to use Babel in the browser to get this compiling right in here without having to install any other tools. This below script tag here to include Babel standalone. That will compile any script tag that has a type ```text/babel```. Then it will create the new script with the compiled code type as ```text/javascript``` so that browser can evaluate it.
+
+``` <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>```
